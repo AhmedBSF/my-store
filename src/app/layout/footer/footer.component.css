@@ -1,0 +1,21 @@
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #33B5E5;
+  height: auto;
+  width: 100%;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.copyright a {
+  text-decoration: none;
+}

@@ -1,1 +1,9 @@
-<p>header works!</p>
+<header class="header">
+  <h1>{{ title }}</h1>
+  <a
+    *ngFor="let link of links"
+    routerLink="{{ link.url }}"
+    routerLinkActive="active-link"
+    >{{ link.label }}</a
+  >
+</header>

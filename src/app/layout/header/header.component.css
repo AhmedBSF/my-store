@@ -1,0 +1,25 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background: #33B5E5;
+  color: #fff;
+}
+
+.header a {
+  width: 90px;
+  display: inline-block;
+  color: #ffffff;
+  border: 1px solid white;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 10px;
+
+}
+
+.header a:hover, .active-link {
+  color: #33B5E5;
+  background-color: #fff;
+}
