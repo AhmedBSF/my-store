@@ -23,3 +23,7 @@
   color: #33B5E5;
   background-color: #fff;
 }
+
+.header h1 {
+  padding: 20px 0;
+}
