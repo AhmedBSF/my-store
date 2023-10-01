@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Product } from '../product-list/product-list.component';
 
 @Component({
@@ -10,4 +10,8 @@ export class ProductItemComponent {
   @Input()
   product: Product | undefined;
   quantity: number = 1;
+
+  public addToCart() {
+    alert('Added to cart!');
+  }
 }

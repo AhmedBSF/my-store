@@ -1,5 +1,5 @@
 footer{
-  background: #33B5E5;
+  background: var(--brand);
   height: auto;
   width: 100%;
   padding: 20px 0;
