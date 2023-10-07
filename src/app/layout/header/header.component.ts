@@ -10,6 +10,5 @@ export class HeaderComponent {
   links: { label: string; url: string }[] = [
     { label: '🛍', url: '/products' },
     { label: '🛒', url: '/cart' },
-    { label: '🔥', url: '/confirmation' },
   ];
 }
