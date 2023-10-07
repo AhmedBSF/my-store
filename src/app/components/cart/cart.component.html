@@ -1,1 +1,64 @@
-<p>cart works!</p>
+<div class="cart-container">
+  <div class="empty-cart-message" *ngIf="cartProducts.length === 0">
+    {{ cartEmptyMessage }}
+  </div>
+  <div class="cart-panel">
+    <div class="cart-item" *ngFor="let cartProduct of cartProducts">
+      <img [src]="cartProduct.product.url" [alt]="cartProduct.product.name" />
+      <div class="cart-item-details">
+        <div>{{ cartProduct.product.name }}</div>
+        <div>{{ cartProduct.product.price }}</div>
+        <div>
+          Amount :
+          <input
+            class="number-input"
+            name="quantity"
+            type="number"
+            min="1"
+            max="10"
+            [(ngModel)]="cartProduct.amount"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="form-margin">
+    <div class="user-form">
+      <div class="input-field">
+        <label>Full Name</label>
+        <input
+          required
+          minlength="3"
+          class="user-input"
+          type="text"
+          name="full_name"
+          placeholder="(Minimum 3 Characters)"
+        />
+      </div>
+
+      <div class="input-field">
+        <label>Adress</label>
+        <input
+          required
+          minlength="6"
+          class="user-input"
+          type="text"
+          name="adress"
+          placeholder="(Minimum 6 Characters)"
+        />
+      </div>
+      <div class="input-field">
+        <label>Credit Card Number</label>
+        <input
+          required
+          pattern="\d{16}"
+          class="user-input"
+          type="text"
+          name="card-number"
+          placeholder="(16-digit number)"
+        />
+      </div>
+      <button type="submit">Purchase</button>
+    </div>
+  </form>
+</div>

@@ -3,8 +3,18 @@ img {
   border-radius: 10px;
 }
 
-.form-margin {
-  margin-bottom: 12px;
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.empty-cart-message {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
 }
 
 .cart-item {
@@ -17,6 +27,7 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 8px;
   align-items: left;
   margin-left: 80px;
 }
@@ -26,20 +37,41 @@ img {
   text-align: center;
 }
 
-.cart-container {
+.form-margin {
+  margin-bottom: 12px;
+}
+
+.user-form {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 64px;
+  flex-direction: column;
+  width: 250px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0;
+}
+
+input {
+  padding: 8px;
+  display: block;
+  border: none;
+  border-bottom: 2px solid var(--brand);
+  width: 100%;
+}
+
+input:focus, textarea {
+  outline: 1px solid var(--brand);
+  border-radius: 0 8px 8px 0 ;
+}
+
+button:hover {
+  border: 1px solid var(--brand);
 }
 
 .cart-panel {
   margin-left: 50px;
   margin-right: 50px;
-}
-
-.empty-cart-message {
-  display: flex;
-  justify-content: center;
-  margin-top: 64px;
 }
