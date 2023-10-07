@@ -7,7 +7,7 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
 const routes: Routes = [
   { path: '', redirectTo: '/products', pathMatch: 'full' },
   { path: 'products', component: ProductListComponent },
-  { path: 'details', component: ProductItemDetailComponent },
+  { path: 'details/:id', component: ProductItemDetailComponent },
   { path: 'cart', component: CartComponent },
   { path: 'confirmation', component: ConfirmationComponent },
 ];
