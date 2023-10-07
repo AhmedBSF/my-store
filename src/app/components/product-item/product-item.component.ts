@@ -1,5 +1,6 @@
-import { Component, Input, Output } from '@angular/core';
-import { Product } from '../product-list/product-list.component';
+import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/models/product';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product-item',
@@ -8,10 +9,16 @@ import { Product } from '../product-list/product-list.component';
 })
 export class ProductItemComponent {
   @Input()
-  product: Product | undefined;
-  quantity: number = 1;
+  product!: Product;
+  amount: number = 1;
 
-  public addToCart() {
-    alert('Added to cart!');
+  constructor(private cartService: CartService) {}
+
+  public addToCart(product: Product, amount: number) {
+    // alert('Added to cart!');
+    this.cartService.addToCart({
+      product: product,
+      amount: amount,
+    });
   }
 }

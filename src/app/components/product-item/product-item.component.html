@@ -1,15 +1,28 @@
 <div class="product-container">
-  <img class="product-image" [src]="product?.url" [alt]="product?.name" />
+  <img class="product-image" [src]="product.url" [alt]="product.name" />
   <div class="product-info">
-    <p class="product-text">{{ product?.name }}</p>
-    <p class="product-text">${{ product?.price }}</p>
+    <p class="product-text">{{ product.name }}</p>
+    <p class="product-text">${{ product.price }}</p>
   </div>
   <div class="product-cta">
-    <select class="select-input">
-      <option *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
-        {{ i }}
-      </option>
+    <select class="select-input" [(ngModel)]="amount">
+      <option *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">{{ i }}</option>
     </select>
-    <button (click)="addToCart()">Add to cart</button>
+    <button
+      (click)="
+        addToCart(
+          {
+            id: product.id,
+            name: product.name,
+            url: product.url,
+            price: product.price,
+            description: product.description
+          },
+          amount
+        )
+      "
+    >
+      Add to cart
+    </button>
   </div>
 </div>
