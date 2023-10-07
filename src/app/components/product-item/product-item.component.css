@@ -60,22 +60,3 @@
   outline: 0px;
 }
 
-button {
-  font-size: large;
-  background: none;
-  width: 80%;
-  padding: 20px;
-  height: 100%;
-  border: none;
-  color: white;
-  background-color: var(--brand);
-  cursor: pointer;
-  border-radius: 0 7px 7px 0;
-
-}
-
-button:hover {
-  color: var(--brand);
-  background-color: white;
-  font-weight: bold;
-}
