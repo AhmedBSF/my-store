@@ -21,31 +21,34 @@
         </div>
       </div>
     </div>
+    <strong *ngIf="cartProducts.length > 0">Total: ${{ price }}</strong>
   </div>
-  <form class="form-margin">
+  <form class="form-margin" [formGroup]="cartInfo" (ngSubmit)="onSubmit()">
     <div class="user-form">
       <div class="input-field">
         <label>Full name</label>
         <input
-          type="text"
-          name="full_name"
           placeholder="(Minimum 3 Characters)"
+          formControlName="fullName"
         />
+        <strong>{{ cartInfo.get("fullName").status }}</strong>
       </div>
 
       <div class="input-field">
         <label>Address</label>
-        <input type="text" name="adress" placeholder="(Minimum 6 Characters)" />
+        <input placeholder="(Minimum 6 Characters)" formControlName="address" />
+        <strong>{{ cartInfo.get("address").status }}</strong>
       </div>
       <div class="input-field">
         <label>Credit card number</label>
         <input
-          type="number"
-          name="card-number"
+          type="text"
           placeholder="(16-digit number)"
+          formControlName="creditCard"
         />
+        <strong>{{ cartInfo.get("creditCard").status }}</strong>
       </div>
-      <button routerLink="/confirmation" type="submit">Purchase</button>
+      <button type="submit" [disabled]="!cartInfo.valid">Purchase</button>
     </div>
   </form>
 </div>

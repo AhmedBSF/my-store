@@ -15,7 +15,7 @@ export class ProductItemComponent {
   constructor(private cartService: CartService) {}
 
   public addToCart(product: Product, amount: number) {
-    // alert('Added to cart!');
+    alert('Added to cart!');
     this.cartService.addToCart({
       product: product,
       amount: amount,
